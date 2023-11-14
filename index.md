@@ -1,34 +1,26 @@
-<script type="text/javascript">
-function passWord() {
-var count = 1;
-var pass1 = prompt('Please Enter Your Password',' ');
-//change to your password
-var password = "thisisthepassword"
-//max attempts
-var maxattempt = 4
- 
-while (count < 4) {
-if (!pass1)
-history.go(-1);
-if (pass1.toLowerCase() == password) {
-alert('You Got it Right!');
-window.open('theotherpage.html');
-break;
-}
-count+=1;
-var pass1 =
-prompt('Access Denied - Password Incorrect, Please Try Again.','Give Me The Password');
-}
- 
-if(count == maxattempt)
-{
-alert("Attempted 4 times")
-}
- 
-}
-</SCRIPT>
-<CENTER>
-<FORM>
-<input type="button" value="Enter Protected Area"  onClick="passWord()">
-</FORM>
-</CENTER></strong>
+<!DOCTYPE html>
+    <html>
+    <body>
+    
+    <p>Click the button to check your password. If it is correct a link will appear.</p>
+    
+    Password: 
+    <input type='text' value='' id='myInput'><br><br>
+    <input type='checkbox' onclick='myFunction()'>Show results
+    
+<a href="index.html" id='demo' style='display:none; color: black;'>link text</a>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById('myInput');
+      var y = document.getElementById('demo');
+      if (x.value === '45') {
+        y.style.display = 'block';
+      } else {
+        y.style.display = 'none';
+      }
+    }
+    </script>
+   </body>
+
+    </html>
